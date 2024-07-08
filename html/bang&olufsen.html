@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bang&olufsen</title>
+
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/swiper.css" type="text/css">
+
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/index.js"></script>
+    
+    <style>
+        body{
+            background-color: #1d224b;
+        }
+        #container{
+            width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        /* head */
+        #pp_head{
+            width: 100%;
+            height: 700px;
+            background-color: rgb(250, 250, 250);
+            position: relative;
+        }
+        .pp_head_wrap{
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            height: 100%;
+            margin-top: 70px;
+        }
+        .pp_head_bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 65%;
+            background-color: #eaeaea;
+        }
+        .pp_head_text_box{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 80%;
+            height: 70%;
+        }
+        h3{
+            margin-top: 40px;
+            font-size: 37px;
+            line-height: 41px;
+            font-weight: 400;
+        }
+        h1{
+            font-size: 60px;
+        }
+        .pp_text_button{
+            margin-top: 160px;
+            width: 180px;
+            height: 45px;
+            line-height: 45px;
+            background-color: #47516d;
+            border: 3px solid #47516d;
+            text-align: center;
+        }
+        .pp_text_button>a{
+            font-size: 17px;
+            color: white;
+            font-weight: 600;
+        }
+        .pp_text_button:hover{
+            background-color: transparent;            
+        }
+        .pp_text_button:hover>a{
+            color: #47516d;
+        }
+        h4{
+            font-weight: 100;
+        }
+        .pp_btn_sub{
+            line-height: 35px;
+            font-size: 13px;
+            font-weight: 100;
+        }
+
+        .pp_head_img_box{
+            position: absolute;
+            top: 80%;
+            transform: translateY(-80%);
+            right: 0;
+            width: 65%;
+            height: 70%;
+        }
+        .pp_head_img_box>img{
+            width: 110%;
+            height: auto;
+            overflow: hidden;
+        }
+
+
+        /* main */
+        #pp_main{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color:white;
+        }
+        #pp_main_wrap{
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* left */
+        .left_wrap{
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .left_wrap>li{
+            width: 100%;
+            margin: 70px 0px;
+        }    
+
+        /* right */
+        .right_wrap{
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .right_wrap>li{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            margin:70px 0px;
+        }
+
+
+
+        .pp_left{
+            width: 100%;
+            border-right: 1px solid #e8e9fa;
+        }
+        .pp_right{
+            width: 100%;
+            border-left: 1px solid #e8e9fa;
+        }
+        .pp_num{
+            font-size: 20px;
+            font-weight: bold;
+            color: #869bd3;
+        }
+        .pp_title{
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color:#444;
+            line-height: 46px;
+        }
+
+        .pp_title_sub>span{
+            color: #888;
+        }
+        .pp_title_sub>img{
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+        }
+        .pp_title_sub{
+            font-size: 15px;
+            line-height: 32px;
+            letter-spacing: 1px;
+            margin: 10px;
+        }
+        .pp_title_sub>li{
+            width: 100%;
+            margin: 60px 0px;
+        }
+        .abc>span{
+            font-size: 17px;
+            font-weight: 400;
+            color: #888;
+        }
+        .pp_title_subb{
+            padding-top: 20px;
+            padding-left: 60px;
+            text-align: left;
+            font-size: 15px;
+            line-height: 30px;
+        }
+        .pp_title_subbb{
+            padding-left: 20px;
+            text-align: left;
+            font-size: 17px;
+        }
+        .pp_title_subbb>li{
+            list-style: circle;
+            font-weight: 400;
+            line-height: 50px;
+            color: #666666;
+        }
+        .pp_title_subbb>li:nth-child(4){
+            list-style: square;
+            line-height: 80px;
+            font-weight: 400;
+            color: #47516d;
+        }
+        .pp_title_sub>p{
+            font-size: 18px;
+            line-height: 40px;
+            font-weight: bold;
+        }
+
+
+
+        .pp_grid{
+            display: flex;
+            justify-content: space-around;
+        }
+        .pp_grid>li{
+            margin: 50px;
+            position: relative;;
+        }
+        .grid_up{
+            position: relative;
+            width: 100%;
+            height: 100px;
+        }
+        .grid_up_o{
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .grid_up_o.pink{
+            background-color:#eaeaea;
+        }
+        .grid_up_o.mint{
+            background-color: #47516d;
+        }
+        .grid_up_o.black{
+            background-color: rgb(0, 0, 0);
+        }
+        .grid_down{
+            color: #888;
+        }
+
+        
+        
+       
+
+        .pp_02{
+            position: relative;
+            display: grid;
+            grid-template-columns: 30% 10% 60%;
+            width: 100%;
+            height: auto;
+            margin: 20px 0px;
+        }
+        .pp_02_pr{}
+        .pp_02_pj.j{
+            line-height: 130px;
+        }
+        .pp_02_pj{
+            color: #b4c4e1;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 70px;
+        }
+        .pp_02_pl{
+            font-size: 14px;
+        }
+        .pp_cir{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .pp_cir_wrap{
+            width: 70%;
+            height: 130px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .pp_cir_1.c3{
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #b3b3b38c;
+        }
+        .pp_cir_1.c1{
+            left: 0;
+            background-color: #99c5ffdb;
+        }
+        .pp_cir_1.c2{
+            right: 0;
+            background-color: #8f93d1a3;
+        }
+        .pp_cir_1{
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            line-height: 120px;
+            color:#555;
+            font-weight: bold;
+        }
+        
+        @media only screen and (min-width:100px) and (max-width:1000px){
+	        .wrap{
+		        width:100%;
+	        }
+
+	
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="pp_head" class="wrap">
+            <div class="pp_head_bg"></div>
+            <div class="pp_head_wrap">
+                <div class="pp_head_img_box">
+                    <img src="../img/bnag_up.png" alt="bang_mockup">
+                </div>
+                <div class="pp_head_text_box">
+                    <h2>2021</h2>
+                    <h3> 음악과 탁월함에 대한 열정</h3>
+                    <h1>Bang&Olufsen</h1>
+                    <h4>웹사이트 리뉴얼</h4>
+                    <div class="pp_text_button"><a href="http://widi77.dothome.co.kr/jung_eunji/01_b&o/index.html" target="_blank">사이트 바로보기</a></div>
+                    <div class="pp_btn_sub">*버튼을 클릭해 디자인을 확인해보세요</div>
+
+                </div>
+            </div>
+        </div>
+        <div id="pp_main">        
+            <div id="pp_main_wrap">
+                <div class="pp_left">
+                    <ul class="left_wrap">
+
+                        <li>
+                            <div class="pp_num">01</div>
+                            <div class="pp_title">PREVIEW</div>
+                            
+                            <div class="pp_title_subb">
+                                프로젝트 : 고급형 오디오로 인기있는 뱅앤올룹슨 사이트 리뉴얼<br>
+                                제작기간 : 2021.06.02 - 2021.06.09<br>
+                                유형 : pc, tab, mobile 호환 / 반응형 디자인<br>
+                                참여도 : 개인작업 100%
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="pp_num">02</div>
+                            <div class="pp_title">RESEARCH</div>
+                            <ol class="pp_title_sub">
+                                <li class="abc">
+
+                                    <span> a.기존 디자인 문제점</span>
+                                    
+                                    <div class="pp_02">
+                                        <div class="pp_02_pr"><br>#경쟁사와 비슷한<br> 디자인의 웹사이트 </div>
+                                        <div class="pp_02_pj j"> → </div>  
+                                        <div class="pp_02_pl">
+                                            다른 경쟁브랜드의<br> 웹사이트와 별반 다를게 없는 어두운 색상의<br> 제품 소개글과 식상한 디자인으로<br> 인상에 남지 않음
+                                        </div>      
+                                    </div>
+                                    <div class="pp_02">
+                                        <div class="pp_02_pr">#주력 상품의 어필 부족</div>
+                                        <div class="pp_02_pj">→ </div>  
+                                        <div class="pp_02_pl">
+                                            메인 사진에서 주력상품 어필이 부족했으며,<br> 보러가기 버튼을 눌러야만 상품을 볼 수 있어 불편함
+                                        </div>      
+                                    </div>
+                                </li>
+                                <li class="abc">
+                                    <span>b. 기업분석 </span><br>
+                                    <div class="pp_title_sub">
+                                        <p> 고급형 오디오 회사 Bang&Olufsen은, </p>
+                                        디자이너 컬렉션이나 뮤지션, 자동차, 영화 등등 다양한 콜라보를 통해 
+                                        뱅앤울룹슨의 가치를 높여 가고있다. 또, 끊임없는 연구와 노력으로 
+                                        사람들의 생활 속에 더욱더 상승된 질의 사운드와 디자인을 제공하고자하는 
+                                        미래지향적인 기업이다<br>
+                                    </div>
+                                
+                                </li>
+                                <li class="abc">    
+                                    <span>c. 타겟층 분석 </span><br>
+                                    <div class="pp_title_sub">10대부터 60대 이상까지 다양한 세대가 사용 가능</div>
+                                    <div class="pp_cir">
+                                        <div class="pp_cir_wrap">
+                                            <div class="pp_cir_1 c1">10대</div>
+                                            <div class="pp_cir_1 c3">~</div>
+                                            <div class="pp_cir_1 c2">60대</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pp_right">
+                    <ul class="right_wrap">
+                        <li>
+                            <div class="pp_num">03</div>
+                            <div class="pp_title">COLOR</div>
+                            <ol class="pp_grid">
+                                <li>
+                                    <div class="grid_up">
+                                        <div class="grid_up_o pink"></div>
+                                    </div>
+                                    <div class="grid_down">#eaeaea;</div>
+                                </li>
+                                <li>
+                                    <div class="grid_up">
+                                        <div class="grid_up_o mint"></div>
+                                    </div>
+                                    <div class="grid_down">#47516d;</div>
+                                </li>
+                                <li>
+                                    <div class="grid_up">
+                                        <div class="grid_up_o black"></div>
+                                    </div>
+                                    <div class="grid_down">#black;</div>
+                                </li>
+                            </ol>
+                            <div class="pp_title_sub">
+                                상품들이 돋보일 수 있는 베이직한 색을 배경색으로 선정하였고, 
+                                기존의 웹사이트의 색상은 포인트로 줘 뱅앤 올룹슨만의 깔끔하고 고급적인 느낌을 주었다.
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pp_num">04</div>
+                            <div class="pp_title">FONT</div>
+                     
+                            <div class="pp_title_sub">
+                                <img src="../img/pf_notosans.JPG" alt="font_img">
+                                <span>Noto Sans font_bold, medium 사용 </span>
+                           </div>
+                               
+
+                        </li>
+                        <li>
+                            <div class="pp_num">05</div>
+                            <div class="pp_title">DIRECTION</div>
+                            <ol class="pp_title_subbb">
+                                 <li>메인사이트에 주력 상품을 슬라이드 형식으로 여러 상품 어필</li>
+                                 <li>메뉴바와 히든 메뉴를 새롭게 배치, 상품과 어울리는 밝은 색상으로 디자인</li>
+                                 <li>음악적인 아이콘으로 사용자들의 흥미 유발</li>
+                                 <li>경쟁브랜드와 차별화된 새로운 디자인 웹사이트 구축</li>
+                            </ol>
+                               
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

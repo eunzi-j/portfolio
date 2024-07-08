@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width:100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #04192f;
+}
+#wrap{
+    width : 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    /* height: 100vh; */
+}
+
+a{
+    text-decoration: none;
+    color: #252525;
+}
+ul,li{
+    list-style: none;
+}
+img{
+    border: 0;
+    display: block;
+}
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+}
+/* 웹폰트연결 추가로 해봄 */
+/* header a{
+    font-family: 'Dokdo', cursive;
+} */
+/* font-size 미입력 : 17px */

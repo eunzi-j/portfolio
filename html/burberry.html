@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>burberry</title>
+
+    <link rel="stylesheet" href="../css/reset.css" type="text/css">
+    <link rel="stylesheet" href="../css/swiper.css" type="text/css">
+
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/index.js"></script>
+    
+    <style>
+        body{
+            background-color: #535251;
+        }
+        #container{
+            width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        /* head */
+        #pp_head{
+            width: 100%;
+            height: 700px;
+            background-color: rgb(250, 250, 250);
+            position: relative;
+        }
+        .pp_head_wrap{
+            position: relative;
+            width: 80%;
+            margin: 0 auto;
+            height: 100%;
+            margin-top: 70px;
+        }
+        .pp_head_bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 65%;
+            background-color: #b49473;
+        }
+        .pp_head_text_box{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 80%;
+            height: 70%;
+        }
+        h3{
+            margin-top: 40px;
+            font-size: 37px;
+            line-height: 41px;
+            font-weight: 400;
+        }
+        h1{
+            font-size: 60px;
+        }
+        .pp_text_button{
+            margin-top: 160px;
+            width: 180px;
+            height: 45px;
+            line-height: 45px;
+            background-color: #535251;
+            border: 3px solid #535251;
+            text-align: center;
+        }
+        .pp_text_button>a{
+            font-size: 17px;
+            color: white;
+            font-weight: 600;
+        }
+        .pp_text_button:hover{
+            background-color: transparent;            
+        }
+        .pp_text_button:hover>a{
+            color: #535251;
+        }
+        h4{
+            font-weight: 100;
+        }
+        .pp_btn_sub{
+            line-height: 35px;
+            font-size: 13px;
+            font-weight: 100;
+        }
+
+        .pp_head_img_box{
+            position: absolute;
+            top: 80%;
+            transform: translateY(-80%);
+            right: 0;
+            width: 65%;
+            height: 70%;
+        }
+        .pp_head_img_box>img{
+            width: 110%;
+            height: auto;
+            overflow: hidden;
+        }
+
+
+        /* main */
+        #pp_main{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color:white;
+        }
+        #pp_main_wrap{
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* left */
+        .left_wrap{
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .left_wrap>li{
+            width: 100%;
+            margin: 70px 0px;
+        }    
+
+        /* right */
+        .right_wrap{
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .right_wrap>li{
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            margin:70px 0px;
+        }
+
+
+
+        .pp_left{
+            width: 100%;
+            border-right: 1px solid #fdeac0ad;
+        }
+        .pp_right{
+            width: 100%;
+            border-left: 1px solid #fdeac0ad;
+        }
+        .pp_num{
+            font-size: 20px;
+            font-weight: bold;
+            color: #b49473;
+        }
+        .pp_title{
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color:#444;
+            line-height: 46px;
+        }
+
+        .pp_title_sub>span{
+            color: #888;
+        }
+        .pp_title_sub>img{
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+        }
+        .pp_title_sub{
+            font-size: 15px;
+            line-height: 32px;
+            letter-spacing: 1px;
+            margin: 10px;
+        }
+        .pp_title_sub>li{
+            width: 100%;
+            margin: 60px 0px;
+        }
+        .abc>span{
+
+            font-size: 17px;
+            font-weight: 400;
+            color: #888;
+        }
+        .pp_title_subb{
+            padding-top: 20px;
+            padding-left: 60px;
+            text-align: left;
+            font-size: 15px;
+            line-height: 30px;
+        }
+        .pp_title_subbb{
+            padding-left: 40px;
+            text-align: left;
+            font-size: 17px;
+        }
+        .pp_title_subbb>li{
+            list-style: circle;
+            font-weight: 400;
+            line-height: 50px;
+            color: #666666;
+        }
+        .pp_title_subbb>li:nth-child(5){
+            list-style: square;
+            line-height: 80px;
+            color:#b49473;
+        }
+        .pp_title_sub>p{
+            font-size: 18px;
+            line-height: 40px;
+            font-weight: bold;
+        }
+
+
+
+        .pp_grid{
+            display: flex;
+            justify-content: space-around;
+        }
+        .pp_grid>li{
+            margin: 50px;
+            position: relative;;
+        }
+        .grid_up{
+            position: relative;
+            width: 100%;
+            height: 100px;
+        }
+        .grid_up_o{
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .grid_up_o.pink{
+            background-color:#b79674;
+        }
+        .grid_up_o.mint{
+            background-color: #ebebeb;
+        }
+        .grid_up_o.black{
+            background-color: #333;
+        }
+        .grid_down{
+            color: #888;
+        }
+
+        
+        
+       
+
+        .pp_02{
+            position: relative;
+            display: grid;
+            grid-template-columns: 30% 10% 60%;
+            width: 100%;
+            height: auto;
+            margin: 20px 0px;
+        }
+        .pp_02_pr{}
+        .pp_02_pj.j{
+            line-height: 130px;
+        }
+        .pp_02_pj{
+            color: #f7d385;
+            font-size: 25px;
+            font-weight: bold;
+            line-height: 70px;
+        }
+        .pp_02_pl{
+            font-size: 14px;
+        }
+        .pp_cir{
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        .pp_cir_wrap{
+            width: 70%;
+            height: 130px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .pp_cir_1.c3{
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #b3b3b38c;
+        }
+        .pp_cir_1.c1{
+            left: 0;
+            background-color: rgba(255, 206, 153, 0.576)
+        }
+        .pp_cir_1.c2{
+            right: 0;
+            background-color: #d1af8fb4;
+        }
+        .pp_cir_1{
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            line-height: 120px;
+            color:#555;
+            font-weight: bold;
+        }
+        
+        @media only screen and (min-width:100px) and (max-width:1000px){
+	        .wrap{
+		        width:100%;
+	        }
+
+	
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="pp_head" class="wrap">
+            <div class="pp_head_bg"></div>
+            <div class="pp_head_wrap">
+                <div class="pp_head_img_box">
+                    <img src="../img/burberry_up.png" alt="burberry_mockup">
+                </div>
+                <div class="pp_head_text_box">
+                    <h2>2021</h2>
+                    <h3>영국 럭셔리 명품 패션 기업</h3>
+                    <h1>BURBERRY</h1>
+                    <h4> 웹사이트 리뉴얼</h4>
+                    <div class="pp_text_button"><a href="http://widi77.dothome.co.kr/jung_eunji/03_burberry/index.html" target="_blank">사이트 바로보기</a></div>
+                    <div class="pp_btn_sub">*버튼을 클릭해 디자인을 확인해보세요</div>
+
+                </div>
+            </div>
+        </div>
+        <div id="pp_main">        
+            <div id="pp_main_wrap">
+                <div class="pp_left">
+                    <ul class="left_wrap">
+
+                        <li>
+                            <div class="pp_num">01</div>
+                            <div class="pp_title">PREVIEW</div>
+                            
+                            <div class="pp_title_subb">
+                                프로젝트 : 럭셔리 명품 패션 브랜드 버버리 사이트 리뉴얼<br>
+                                제작기간 : 2021.05.04 - 2021.05.18<br>
+                                유형 : pc, tab, mobile 호환 / 반응형 디자인<br>
+                                참여도 : 개인작업 100%
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="pp_num">02</div>
+                            <div class="pp_title">RESEARCH</div>
+                            <ol class="pp_title_sub">
+                                <li class="abc">
+
+                                    <span> a.기존 디자인 문제점</span>
+                                    
+                                    <div class="pp_02">
+                                        <div class="pp_02_pr"><br>#큰 이미지들로 버벅거리는 현상</div>
+                                        <div class="pp_02_pj j"> → </div>  
+                                        <div class="pp_02_pl">
+                                            모든 이미지들이 풀사이즈여서<br> 용량도 컸고 웹사이트가 전체적으로 느렸다.<br>컬렉션 이미지를 간추려서 임팩트있게 소개하는 방향으로 설정했다.  
+                                        </div>      
+                                    </div>
+                                    <div class="pp_02">
+                                        <div class="pp_02_pr">#두서없이 늘어놓은 많은 메뉴들</div>
+                                        <div class="pp_02_pj">→ </div>  
+                                        <div class="pp_02_pl">
+                                            신상품, 쇼, 여성, 남성, 아동, 핸드백, 트렌치코트, 버버리스토리, 비욘드 등등의 자잘한 메뉴들이 많아 큰 카테고리로 분류해 정리했다.
+                                        </div>      
+                                    </div>
+                                </li>
+                                <li class="abc">
+                                    <span>b. 기업분석 </span><br>
+                                    <div class="pp_title_sub">
+                                        <p>영국의 명품 패션 브랜드 BURBERRY는, </p> 
+                                        세계적인 인지도에 걸맞게 트렌치 코트를 포함한 다채로운 의류와 가방, 
+                                        액세서리 등의 최신 컬렉션을 시즌마다 프레젠테이션을 통해 볼수있다.
+                                        기존의 클래식함을 유지하면서도 새로운 가치를 창출하기 위해 다양한 노력을 하는 기업이다.<br>
+                                    </div>
+                                
+                                </li>
+                                <li class="abc">    
+                                    <span>c. 타겟층 분석 </span><br>
+                                    <div class="pp_title_sub">명품에 관심있으며, 소비가 비교적 여유로운 기성세대</div>
+                                    <div class="pp_cir">
+                                        <div class="pp_cir_wrap">
+                                            <div class="pp_cir_1 c1">30대</div>
+                                            <div class="pp_cir_1 c3">~</div>
+                                            <div class="pp_cir_1 c2">50대</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pp_right">
+                    <ul class="right_wrap">
+                        <li>
+                            <div class="pp_num">03</div>
+                            <div class="pp_title">COLOR</div>
+                            <ol class="pp_grid">
+                                <li>
+                                    <div class="grid_up">
+                                        <div class="grid_up_o pink"></div>
+                                    </div>
+                                    <div class="grid_down">#fadcd4;</div>
+                                </li>
+                                <li>
+                                    <div class="grid_up">
+                                        <div class="grid_up_o mint"></div>
+                                    </div>
+                                    <div class="grid_down">#e8e8e8;</div>
+                                </li>
+                                <li>
+                                    <div class="grid_up">
+                                        <div class="grid_up_o black"></div>
+                                    </div>
+                                    <div class="grid_down">#333;</div>
+                                </li>
+                            </ol>
+                            <div class="pp_title_sub">
+                                버버리의 시그니처인 버버리코트를 메인색으로, 블랙이 아닌 채도가 낮은 그레이를 선택해 고급스러움을 더해 주었다. 
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pp_num">04</div>
+                            <div class="pp_title">FONT</div>
+                    
+                            <div class="pp_title_sub">
+                                <img src="../img/pf_notosans.JPG" alt="font_img">
+                                <span>Noto Sans font_bold, medium 사용 </span>
+                           </div>
+                               
+
+                        </li>
+                        <li>
+                            <div class="pp_num">05</div>
+                            <div class="pp_title">DIRECTION</div>
+                            <ol class="pp_title_subbb">
+                                 <li>컬렉션 별 카테고리를 만들어 신상 메뉴 권장</li>
+                                 <li>다양한 프레젠테이션을 한눈에 볼수 있도록 이미지 배치</li>
+                                 <li>기업의 방향성과 노력들을 섹션으로 넣어 버버리의 가치 증명</li>
+                                 <li>다양한 효과로 사용자의 흥미 유발</li>
+                                 <li>버버리만의 브랜드를 잘 나타낼 수 있는 웹사이트를 제작하기</li>
+                            </ol>
+                               
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
